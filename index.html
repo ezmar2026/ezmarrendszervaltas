@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Magyar Péter, Tisza párt, rendszerváltás, visszaszámlálás, választás 2026, hátralévő napok, 26"/>
+  <title>Ez már rendszerváltás? | Visszaszámlálás 2026</title>
+  <style>
+    :root {
+      --main-bg: #f2f4f8;
+      --text-color: #000;
+      --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--main-bg);
+      color: var(--text-color);
+      font-family: var(--font-main);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .section {
+      margin: 2rem 0;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .headline {
+      font-weight: 800;
+      font-size: 2.5rem;
+    }
+
+    .not {
+      font-weight: 900;
+      font-size: 4rem;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .counter {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #e63946;
+    
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .headline {
+        font-size: 2rem;
+      }
+      .not {
+        font-size: 3rem;
+      }
+      .counter {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="section headline">Ez már rendszerváltás?</div>
+  <div class="section not">NEM!</div>
+  <div class="section">
+    <div class="description">
+      A 2026-os országgyűlési választásokig feltételezhetően hátralévő napok száma:
+    </div>
+    <div id="countdown" class="counter">...</div>
+  </div>
+  <div class="section footer">
+    Abban az esetben ha a választópolgárok 2026 tavaszán egy új politikai erőnek szavaznak bizalmat, 
+    a választási eredmények megismerése után a <strong>"NEM!"</strong> szócskát élőben, 
+    manuálisan fogjuk <strong>IGEN!</strong>-re cserélni.
+  </div>
+
+  <script>
+    function updateCountdown() {
+      const targetDate = new Date(2026, 3, 12); 
+      const today = new Date();
+  
+     
+      targetDate.setHours(0,0,0,0);
+      today.setHours(0,0,0,0);
+  
+      const diffTime = targetDate - today;
+      const diffDays = Math.max(0, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
+  
+      document.getElementById('countdown').textContent = diffDays + " nap";
+    }
+  
+    updateCountdown();
+  </script>
+  <!--
+        ___
+       / o o\  
+      |  ^  ^|   
+       \__=_/    
+      /     \     
+     | () () |    
+      \  ^  /     
+       |||||       
+      /_/ \_\     
+
+      U LOOKED ;)
+-->
+</body>
+</html> 
