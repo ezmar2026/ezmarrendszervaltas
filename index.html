@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Magyar Péter, Tisza párt, rendszerváltás, visszaszámlálás, választás 2026, hátralévő napok, 26"/>
+  <link rel="icon" href="https://emojicdn.elk.sh/🇭🇺" />
   <script data-goatcounter="https://ezmar2026.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
   <title>Ez már rendszerváltás? | Visszaszámlálás 2026</title>
@@ -12,6 +13,8 @@
       --main-bg: #f2f4f8;
       --text-color: #000;
       --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --button-color: #ffdd00;
+      --button-text: #000;
     }
 
     * {
@@ -59,13 +62,35 @@
       font-size: 3rem;
       font-weight: 700;
       color: #e63946;
-    
     }
 
     .footer {
       margin-top: 2rem;
       font-size: 1.2rem;
       line-height: 1.5;
+    }
+
+    .support {
+      margin-top: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .coffee-button {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: var(--button-color);
+      color: var(--button-text);
+      font-weight: bold;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .coffee-button:hover {
+      background-color: #f1e7a8;
     }
 
     @media (max-width: 600px) {
@@ -79,6 +104,41 @@
         font-size: 2.5rem;
       }
     }
+    .share-buttons {
+  margin-top: 2rem;
+}
+
+.share-buttons p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #000;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0.25rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background-color: #333;
+}
+
+.share-btn .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: white;
+}
   </style>
 </head>
 <body>
@@ -96,23 +156,32 @@
     manuálisan fogjuk <strong>IGEN!</strong>-re cserélni.
   </div>
 
+  <div class="section support">
+    Ha menőnek tartod, hogy létezik egy ilyen oldal, akkor kérlek támogasd a fennmaradását <br>egy kávé árával,
+    vagy ha megteheted, akkor akár többel :)
+    <br />
+    <a class="coffee-button" href="https://coff.ee/ezmar2026" target="_blank" rel="noopener noreferrer">
+      BuyMeACoffee
+    </a>
+  </div>
+
   <script>
     function updateCountdown() {
-      const targetDate = new Date(2026, 3, 12); 
+      const targetDate = new Date(2026, 3, 12); // Április 12.
       const today = new Date();
-  
-     
+
       targetDate.setHours(0,0,0,0);
       today.setHours(0,0,0,0);
-  
+
       const diffTime = targetDate - today;
       const diffDays = Math.max(0, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
-  
+
       document.getElementById('countdown').textContent = diffDays + " nap";
     }
-  
+
     updateCountdown();
   </script>
+
   <!--
         ___
        / o o\  
@@ -125,6 +194,22 @@
       /_/ \_\     
 
       U LOOKED ;)
--->
+  -->
+      <div class="section share-buttons">
+  <p>Oszd meg, ha szerinted is fontos!</p>
+  
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://ezmarrendszervaltas.online/"
+     target="_blank" class="share-btn" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" class="icon"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.8h2.3l-.4 3H14v7A10 10 0 0 0 22 12Z" fill="white"/></svg>
+    Facebook
+  </a>
+
+  <a href="https://twitter.com/intent/tweet?text=Ez+már+rendszerváltás%3F+NEM%21&url=https://ezmarrendszervaltas.online/"
+     target="_blank" class="share-btn" aria-label="X / Twitter">
+    <svg viewBox="0 0 24 24" class="icon"><path d="M20.3 3H16l-3.8 6L8.3 3H3l6.3 9.3L3 21h4.4l4.2-6.6 4.1 6.6H21l-6.5-9.8L20.3 3Z" fill="white"/></svg>
+    X / Twitter
+  </a>
+
+</div>
 </body>
-</html> 
+</html>
